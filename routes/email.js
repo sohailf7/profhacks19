@@ -16,7 +16,7 @@ router.put('/', function(req, res, next) {
                 "email": "team@profhacks.com"
               }
             ],
-            "subject": "ProfHacks 2017 Contact Form"
+            "subject": "ProfHacks 2018 Contact Form"
           }
         ],
         "from": {
