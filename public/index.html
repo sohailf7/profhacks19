@@ -86,11 +86,15 @@ testing purposes-->
         }
 
         a {
-            color: #843D89;
+            color: #FFFFFF;
+            text-decoration: underline;
+            text-decoration-color: #843D89;
+            text-decoration-style: dotted;
         }
 
         a:hover {
             color: #D3D3D3;
+            text-decoration-style: solid;
         }
 
         li.list-group-item {
@@ -114,12 +118,12 @@ testing purposes-->
                             console.log("It's 0");
                             $('#mlh-trust-badge').animate(
                                 {'top': '100px'},
-                                1250, function(){console.log("Complete Move Down");});
+                                1250, function(){});
                         }
                         else if(scrollPercent > 0){
                             $('#mlh-trust-badge').animate(
                                 {'top': '70px'},
-                                1250, function(){console.log("Complete Move Up");});
+                                1250, function(){});
                         }
                     }, 250) );
                 });
@@ -667,15 +671,13 @@ testing purposes-->
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>How do I get there?</h3>
                     <p>From Philly</p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0"
-                            style="color: #B26DE1">You can drive to Glassboro by taking NJ 42 to NJ 55 to US 322 at exit 50B.</a></p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3"
-                            style="color: #B26DE1;">You can take NJTransit bus.</a></p>
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0"> You can drive to Glassboro by taking NJ 42 to NJ 55 to US 322 at exit 50B.</a></p>
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3">
+                    You can take NJTransit bus.</a></p>
                     <p>Outside Philly</p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0"
-                            style="color: #B26DE1;">Consider using US Megabus.</a></p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3"
-                            style="color: #B26DE1;">You may also want to use Amtrak.</a></p>
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0"> Consider using US Megabus.</a></p>
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3"> 
+                    You may also want to use Amtrak.</a></p>
                     <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
