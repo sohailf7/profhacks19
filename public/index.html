@@ -52,12 +52,12 @@ testing purposes-->
 
         .logo {
             padding: 250px;
-            background: url('img/logo_white.svg') no-repeat center center;
+            background: url('img/PROF.svg') no-repeat center center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            background-size: 800px 1200px;
+            background-size: 600px 1200px;
             margin-bottom: 60px;
         }
 
@@ -87,13 +87,23 @@ testing purposes-->
 
         a {
             color: #FFFFFF;
+        }
+        
+        .gray-link{
             text-decoration: underline;
+            text-decoration-color: #FFFFFF;
+            text-decoration-style: dotted;
+        }
+        
+        #email-link{
+            color: #843D89;
             text-decoration-color: #843D89;
             text-decoration-style: dotted;
         }
 
-        a:hover {
+        a:hover, #email-link:hover {
             color: #D3D3D3;
+            text-decoration-color: #D3D3D3;
             text-decoration-style: solid;
         }
 
@@ -118,33 +128,17 @@ testing purposes-->
                             console.log("It's 0");
                             $('#mlh-trust-badge').animate(
                                 {'top': '100px'},
-                                1250, function(){});
+                                500, function(){});
                         }
                         else if(scrollPercent > 0){
                             $('#mlh-trust-badge').animate(
                                 {'top': '70px'},
-                                1250, function(){});
+                                500, function(){});
                         }
-                    }, 250) );
+                    }, 100) );
                 });
             });
-            
-            
-            
-            /*$(window).scrollEnd(function(){
-                */
         });
-        
-        // extension:
-        $.fn.scrollEnd = function(callback, timeout) {          
-          $(this).scroll(function(){
-            var $this = $(this);
-            if ($this.data('scrollTimeout')) {
-              clearTimeout($this.data('scrollTimeout'));
-            }
-            $this.data('scrollTimeout', setTimeout(callback,timeout));
-          });
-        };
     </script>
 </head>
 
@@ -467,7 +461,7 @@ testing purposes-->
                 </div>
             </div>
             
-            <center><h3>Want to sponsor? <a href="mailto:fischj4@students.rowan.edu">Email us.</a></h3></center>
+            <center><h3>Want to sponsor? <a href="mailto:fischj4@students.rowan.edu" id="email-link">Email us.</a></h3></center>
             
             <!--<div class="row" style="text-align:center">
                 <h1>Oak Sponsors</h1>
@@ -672,12 +666,12 @@ testing purposes-->
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>How do I get there?</h3>
                     <p>From Philly</p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0"> You can drive to Glassboro by taking NJ 42 to NJ 55 to US 322 at exit 50B.</a></p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3">
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0" class="gray-link"> You can drive to Glassboro by taking NJ 42 to NJ 55 to US 322 at exit 50B.</a></p>
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3" class="gray-link">
                     You can take NJTransit bus.</a></p>
                     <p>Outside Philly</p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0"> Consider using US Megabus.</a></p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3"> 
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0" class="gray-link"> Consider using US Megabus.</a></p>
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3" class="gray-link"> 
                     You may also want to use Amtrak.</a></p>
                     <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
@@ -796,10 +790,10 @@ testing purposes-->
                 </div> 
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>I have a question that's not answered here; what should I do?</h3>
-                    <p>We’re here for you! Send us an email at <a href="mailto:team@profhacks.com">team@profhacks.com</a> or feel free to reach out to us on
-                        <a href="https://www.facebook.com/RowanProfHacks/">Facebook</a>,
-                        <a href="https://twitter.com/RowanProfHacks">Twitter</a>, and
-                        <a href="https://www.instagram.com/rowanprofhacks/">Instagram</a>.</p>
+                    <p>We’re here for you! Send us an email at <a href="mailto:team@profhacks.com" class="gray-link">team@profhacks.com</a> or feel free to reach out to us on
+                        <a href="https://www.facebook.com/RowanProfHacks/" class="gray-link">Facebook</a>,
+                        <a href="https://twitter.com/RowanProfHacks" class="gray-link">Twitter</a>, and
+                        <a href="https://www.instagram.com/rowanprofhacks/" class="gray-link">Instagram</a>.</p>
                 </div>
             </div>
         </div>
