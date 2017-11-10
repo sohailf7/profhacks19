@@ -101,25 +101,51 @@ testing purposes-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#mlh-trust-badge').css('top', '100px');
-            $(window).scroll(function(){
-                var scrollArea = 1000 - window.innerHeight;
-                var scrollTop = window.pageYOffset || window.scrollTop;
-                var scrollPercent = scrollTop/scrollArea || 0;
+            
+            $(function() {
+                $( window ).scroll(function() {
+                    clearTimeout( $.data( this, "scrollCheck" ) );
+                    $.data( this, "scrollCheck", setTimeout(function() {
+                        var scrollArea = 1000 - window.innerHeight;
+                        var scrollTop = window.pageYOffset || window.scrollTop;
+                        var scrollPercent = scrollTop/scrollArea || 0;
 
-                if(scrollPercent == 0){
-                    $('#mlh-trust-badge').css('top', '100px');
-                }
-                else{
-                    $('#mlh-trust-badge').css('top', '70px');
-                }
+                        if(scrollPercent == 0){
+                            console.log("It's 0");
+                            $('#mlh-trust-badge').animate(
+                                {'top': '100px'},
+                                1250, function(){console.log("Complete Move Down");});
+                        }
+                        else if(scrollPercent > 0){
+                            $('#mlh-trust-badge').animate(
+                                {'top': '70px'},
+                                1250, function(){console.log("Complete Move Up");});
+                        }
+                    }, 250) );
+                });
             });
+            
+            
+            
+            /*$(window).scrollEnd(function(){
+                */
         });
+        
+        // extension:
+        $.fn.scrollEnd = function(callback, timeout) {          
+          $(this).scroll(function(){
+            var $this = $(this);
+            if ($this.data('scrollTimeout')) {
+              clearTimeout($this.data('scrollTimeout'));
+            }
+            $this.data('scrollTimeout', setTimeout(callback,timeout));
+          });
+        };
     </script>
 </head>
 
 <body id="page-top" class="index">
-    <a id="mlh-trust-badge" style=display:block;max-width:100px;min-width:60px;position:fixed;right:15px;width:10%;z-index:10000 href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+    <a id="mlh-trust-badge" style=display:block;max-width:100px;min-width:60px;position:fixed;right:15px;top:100px;width:10%;z-index:10000 href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
