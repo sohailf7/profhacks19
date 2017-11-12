@@ -38,7 +38,6 @@ testing purposes-->
     <!-- Adding css to override some properties (temp)-->
     <style>
         html{
-            /*overflow-x: hidden; */
         }
         .navbar-custom {
             background-color: #843D89;
@@ -139,6 +138,18 @@ testing purposes-->
             .logo{
                 width:100%; 
                 background-size: contain;
+            }
+            
+        }
+        
+        @media screen and (max-width:500px){
+            .logo{
+                width:0%;
+                background-size:contain;
+            }
+            header{
+                background: url('img/background-mobile.png') no-repeat center center fixed;
+                background-size: auto 100%;
             }
         }
     </style>
@@ -923,6 +934,7 @@ testing purposes-->
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
     
+    <!-- MLH Badge Animation -->
     <script>
         $(document).ready(function(){
             $(function() {
