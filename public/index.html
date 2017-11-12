@@ -38,7 +38,7 @@ testing purposes-->
     <!-- Adding css to override some properties (temp)-->
     <style>
         html{
-            overflow-x: hidden; 
+            /*overflow-x: hidden; */
         }
         .navbar-custom {
             background-color: #843D89;
@@ -57,8 +57,9 @@ testing purposes-->
         }
 
         .logo {
+            width: 100%;
             padding: 250px;
-            background-size: 100vw;
+            background-size: contain;
             background: url('img/PROF.svg') no-repeat center center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -75,6 +76,10 @@ testing purposes-->
             background-size: contain;
             background-repeat: no-repeat;
             vertical-align: middle;
+        }
+        
+        .sponsors-link > img{
+            width:100%;
         }
 
         hr.star-light:after {
@@ -132,7 +137,8 @@ testing purposes-->
                 width:100vw;
             }
             .logo{
-                 width:100%;   
+                width:100%; 
+                background-size: contain;
             }
         }
     </style>
