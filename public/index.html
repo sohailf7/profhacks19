@@ -896,32 +896,34 @@ testing purposes-->
     
     <script>
         $(document).ready(function(){
-            if(window.innerWidth > 767){
-                $(function() {
-                $( window ).scroll(function() {
-                    clearTimeout( $.data( this, "scrollCheck" ) );
-                    $.data( this, "scrollCheck", setTimeout(function() {
-                        var scrollArea = 1000 - window.innerHeight;
-                        var scrollTop = window.pageYOffset || window.scrollTop;
-                        var scrollPercent = scrollTop/scrollArea || 0;
+            $(function() {
+                console.log(window.widt);
+                if(window.innerWidth > 767){
 
-                        if(scrollPercent == 0){
-                            $('#mlh-trust-badge').animate(
-                                {'top': '100px'},
-                                500, function(){});
-                        }
-                        else if(scrollPercent > 0){
-                            $('#mlh-trust-badge').animate(
-                                {'top': '70px'},
-                                500, function(){});
-                        }
-                    }, 100) );
-                });
-            });    
-            }
-            else{
-                $('#mlh-trust-badge').css('top': '50px');
-            }
+                    $( window ).scroll(function() {
+                        clearTimeout( $.data( this, "scrollCheck" ) );
+                        $.data( this, "scrollCheck", setTimeout(function() {
+                            var scrollArea = 1000 - window.innerHeight;
+                            var scrollTop = window.pageYOffset || window.scrollTop;
+                            var scrollPercent = scrollTop/scrollArea || 0;
+
+                            if(scrollPercent == 0){
+                                $('#mlh-trust-badge').animate(
+                                    {'top': '100px'},
+                                    500, function(){});
+                            }
+                            else if(scrollPercent > 0){
+                                $('#mlh-trust-badge').animate(
+                                    {'top': '70px'},
+                                    500, function(){});
+                            }
+                        }, 100) );
+                    });  
+                }
+                else{
+                    $('#mlh-trust-badge').css('top', '50px');
+                }
+            });  
         });
     </script>
 
