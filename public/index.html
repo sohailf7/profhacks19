@@ -18,7 +18,7 @@ testing purposes-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -52,6 +52,7 @@ testing purposes-->
 
         .logo {
             padding: 250px;
+            width:100%;
             width:100%;
             background: url('img/PROF.svg') no-repeat center center;
             -webkit-background-size: cover;
@@ -113,34 +114,8 @@ testing purposes-->
             background-color: #898989;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            
-            $(function() {
-                $( window ).scroll(function() {
-                    clearTimeout( $.data( this, "scrollCheck" ) );
-                    $.data( this, "scrollCheck", setTimeout(function() {
-                        var scrollArea = 1000 - window.innerHeight;
-                        var scrollTop = window.pageYOffset || window.scrollTop;
-                        var scrollPercent = scrollTop/scrollArea || 0;
-
-                        if(scrollPercent == 0){
-                            console.log("It's 0");
-                            $('#mlh-trust-badge').animate(
-                                {'top': '100px'},
-                                500, function(){});
-                        }
-                        else if(scrollPercent > 0){
-                            $('#mlh-trust-badge').animate(
-                                {'top': '70px'},
-                                500, function(){});
-                        }
-                    }, 100) );
-                });
-            });
-        });
-    </script>
+    <!--TODO: Minify Freelancer.css and js-->
+    
 </head>
 
 <body id="page-top" class="index">
@@ -902,7 +877,7 @@ testing purposes-->
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
-
+    
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -918,6 +893,33 @@ testing purposes-->
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $(function() {
+                $( window ).scroll(function() {
+                    clearTimeout( $.data( this, "scrollCheck" ) );
+                    $.data( this, "scrollCheck", setTimeout(function() {
+                        var scrollArea = 1000 - window.innerHeight;
+                        var scrollTop = window.pageYOffset || window.scrollTop;
+                        var scrollPercent = scrollTop/scrollArea || 0;
+
+                        if(scrollPercent == 0){
+                            $('#mlh-trust-badge').animate(
+                                {'top': '100px'},
+                                500, function(){});
+                        }
+                        else if(scrollPercent > 0){
+                            $('#mlh-trust-badge').animate(
+                                {'top': '70px'},
+                                500, function(){});
+                        }
+                    }, 100) );
+                });
+            });
+        });
+    </script>
 
 </body>
 
