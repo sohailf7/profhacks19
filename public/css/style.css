@@ -1,10 +1,6 @@
 html{
 }
 
-.navbar-custom {
-    background-color: #843D89;
-}
-
 .btn-lg {
     background-color: #898989;
     border-color: #898989;
@@ -67,16 +63,38 @@ hr.star-primary:after {
     text-align: center;
 }
 
-a {
-    color: #FFFFFF;
-}
-
 .gray-link{
     text-decoration: underline;
     text-decoration-color: #FFFFFF;
     text-decoration-style: dotted;
 }
 
+#mlh-trust-badge {
+  display:block;
+  max-width:100px;
+  min-width:60px;
+  position:fixed;
+  right:15px;
+  top:100px;
+  width:10%;
+  z-index:10000;"
+}
+
+#trust-badge-img {
+  width : 100%;
+}
+.map{
+  style="width:100%;
+  min-height:400px;
+}
+
+.mlh-coc{
+  color:white;
+}
+
+.center-text{
+   text-align:center;
+}
 #email-link{
     color: #843D89;
     text-decoration-color: #843D89;
@@ -93,6 +111,16 @@ li.list-group-item {
     color: #FFFFFF;
     background-color: #898989;
 }
+
+hr.dashed {
+  border-top: 1px dashed #8c8b8b;
+  color: white;
+}
+
+a.white-link{
+  color: white;
+}
+
 @media screen and (max-width:767px){
     .html{
         width:100vw;
