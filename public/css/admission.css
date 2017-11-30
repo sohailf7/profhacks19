@@ -4,12 +4,12 @@ body {
 }
 
 header {
-  background: url('img/pattern.png') no-repeat center center fixed;
+  background: url('../img/pattern.png') no-repeat center center fixed;
 }
 
 .logo {
   padding: 200px;
-  background: url('img/logo-color-poly.svg') no-repeat center center;
+  background: url('../img/logo-color-poly.svg') no-repeat center center;
 }
 
 #about.success {
