@@ -8,13 +8,13 @@ testing purposes-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109836031-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', 'UA-109836031-1');
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-109836031-1');
     </script>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,7 @@ testing purposes-->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    
     <!-- Favicon -->
     <link href="./img/favicon.ico" rel="icon" type="image/png">
 
@@ -44,15 +44,130 @@ testing purposes-->
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Adding css to override some properties-->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Adding css to override some properties (temp)-->
+    <style>
+        html{
+        }
+        .navbar-custom {
+            background-color: #843D89;
+        }
 
+        .btn-lg {
+            background-color: #898989;
+            border-color: #898989;
+        }
+
+        header {
+            padding-bottom: 60px;
+            background: url('img/background_2.png') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #898989;
+        }
+
+        .logo {
+            width: 100%;
+            padding: 250px;
+            background-size: contain;
+            background: url('img/PROF.svg') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-size: 800px 1200px;
+            margin-bottom: 60px;
+        }
+        
+        #nav-logo{
+            width:200px;
+            height: 50px;
+            background: url('img/ProfHacksText.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+        
+        .sponsors-link > img{
+            width:100%;
+        }
+
+        hr.star-light:after {
+            background: transparent;
+        }
+
+        hr.star-primary:after {
+            background: transparent;
+        }
+
+        .footer .footer-above {
+            background-color: #898989;
+        }
+
+        .footer .footer-below {
+            background-color: #6E6D6C;
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        #FAQ {
+            text-align: center;
+        }
+
+        a {
+            color: #FFFFFF;
+        }
+        
+        .gray-link{
+            text-decoration: underline;
+            text-decoration-color: #FFFFFF;
+            text-decoration-style: dotted;
+        }
+        
+        #email-link{
+            color: #843D89;
+            text-decoration-color: #843D89;
+            text-decoration-style: dotted;
+        }
+
+        a:hover, #email-link:hover {
+            color: #D3D3D3;
+            text-decoration-color: #D3D3D3;
+            text-decoration-style: solid;
+        }
+
+        li.list-group-item {
+            color: #FFFFFF;
+            background-color: #898989;
+        }
+        @media screen and (max-width:767px){
+            .html{
+                width:100vw;
+            }
+            .logo{
+                width:100%; 
+                background-size: contain;
+            }
+            
+        }
+        
+        @media screen and (max-width:500px){
+            .logo{
+                width:0%;
+                background-size:contain;
+            }
+            header{
+                background: url('img/background-mobile.png') no-repeat center center fixed;
+                background-size: auto 100%;
+            }
+        }
+    </style>
     <!--TODO: Minify Freelancer.css and js-->
-
+    
 </head>
 
 <body id="page-top" class="index">
-    <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season"></a>
+    <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:15px;top:100px;width:10%;z-index:10000;" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -84,9 +199,6 @@ testing purposes-->
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#bios">Biographies</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -101,7 +213,7 @@ testing purposes-->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 logo">
-                <!--<img src="./img/PROF.svg" alt="Profhacks Logo" style="width:100%;">-->
+                <!--<img src="./img/PROF.svg" awlt="Profhacks Logo" style="width:100%;">-->
                 </div>
             </div>
             <div class="row">
@@ -148,15 +260,14 @@ testing purposes-->
             <br />
             <br />
             <div class="row">
-                <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="iframeDim" src="https://maps.google.com/maps?hl=en&amp;q=EngineeringHall, 600 North Campus Drive, Glassboro, NJ 08028&amp;ie=UTF8&amp;t=roadmap&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
+                <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="iframeDim" src="https://maps.google.com/maps?hl=en&amp;q=EngineeringHall, 600 North Campus Drive, Glassboro, NJ 08028&amp;ie=UTF8&amp;t=roadmap&amp;z=16&amp;iwloc=B&amp;output=embed"
+                    style="width:100%; min-height:400px"></iframe>
             </div>
             <br />
             <br />
             <div class="col-lg-8 col-lg-offset-2">
                 <h3>Schedule</h3>
-                <h4>To be determined!</h4>
-                <!-- THIS IS THE TABLE THAT AARON TOLD ME NOT TO DELETE-->
-                <!--<table class="table">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>
@@ -173,7 +284,7 @@ testing purposes-->
                                 10:00AM - 11:00AM
                             </th>
                             <th>
-                                Registration
+                                Check-In
                             </th>
                         </tr>
                         <tr>
@@ -202,18 +313,26 @@ testing purposes-->
                         </tr>
                         <tr>
                             <th>
-                                3:30PM - 4:00PM
+                                1:00PM
                             </th>
                             <th>
-                                MLH Hardware
+                                MLH Hardware Lab Opens
                             </th>
                         </tr>
                         <tr>
                             <th>
-                                5:00PM - 5:30PM
+                                2:30PM - 3:00PM
                             </th>
                             <th>
-                                Session - What is HCI?
+                                What are Smart Cities of Tomorrow and IoT?
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                4:00PM - 5:00PM
+                            </th>
+                            <th>
+                                Workshop 1 to be determined
                             </th>
                         </tr>
                         <tr>
@@ -226,10 +345,18 @@ testing purposes-->
                         </tr>
                         <tr>
                             <th>
-                                7:00PM - 7:30PM
+                                7:00PM - 8:00PM
                             </th>
                             <th>
-                                Session - GitHub
+                                Workshop 2 to be determined
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                9:30PM - 10:30PM
+                            </th>
+                            <th>
+                                Workshop 3 to be determined
                             </th>
                         </tr>
                         <tr>
@@ -274,38 +401,70 @@ testing purposes-->
                         </tr>
                         <tr>
                             <th>
-                                12:00PM - 12:30PM
+                                11:45AM - 12:00PM
                             </th>
                             <th>
-                                Science Fair set-up
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                12:30PM - 2:00PM
-                            </th>
-                            <th>
-                                Science Fair judging
+                                Science Fair Set-Up (Group A)
                             </th>
                         </tr>
                         <tr>
                             <th>
-                                2:30PM - 3:30PM
+                                12:00PM - 1:00PM
                             </th>
                             <th>
-                                Top 10 Hacks present
+                                Science Fair Jugding (Group A)
                             </th>
                         </tr>
                         <tr>
                             <th>
-                                4:00PM - 4:30PM
+                                1:00PM - 1:30PM
                             </th>
                             <th>
-                                Closing ceremony
+                                Science Fair Set-Up (Group B)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                1:30PM - 2:30PM
+                            </th>
+                            <th>
+                                Science Fair Judging (Group B)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                2:30PM - 3:00PM
+                            </th>
+                            <th>
+                                Break - Move to Pfleeger Concert Hall
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                3:00PM - 3:30PM
+                            </th>
+                            <th>
+                                Top 10 Hacks Present
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                3:45PM - 4:15PM
+                            </th>
+                            <th>
+                                Closing Ceremony
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                4:15PM - 5:30PM
+                            </th>
+                            <th>
+                                Clean Up
                             </th>
                         </tr>
                     </tbody>
-                </table>-->
+                </table>
             </div>
         </div>
     </section>
@@ -335,16 +494,35 @@ testing purposes-->
                             </a>
                 </div>
             </div>
+            
+             <div class="row">
+                <br />
+                <br />
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4 sponsors-item">
+                    <a href="https://www.dash.org/" class="sponsors-link">
+                        <img src="img/sponsors/dash_dc_blue.png" class="img-responsive" alt="">
+                            </a>
+                </div>
+            </div>
 
-
-            <div class="row center-text">
+              <div class="row center-text">
                 <h1>Gold Sponsors</h1>
+              </div>
+                <div class="row">
+                <br />
+                <br />
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4 sponsors-item">
+                    <a href="http://www.ieeephiladelphia.org/" class="sponsors-link">
+                        <img src="img/sponsors/ieee_philadelphia_section.jpg" class="img-responsive" alt="">
+                            </a>
+                </div>
             </div>
-            <div class="row">
 
-            </div>
-
-
+<!--
             <div class="row center-text">
                 <h1>Silver Sponsors</h1>
             </div>
@@ -352,6 +530,7 @@ testing purposes-->
 
             </div>
 
+-->
 
             <div class="row center-text">
                 <h1>Bronze Sponsors</h1>
@@ -381,6 +560,16 @@ testing purposes-->
                 <div class="col-sm-4 sponsors-item">
                     <a href="https://stickermule.com" class="sponsors-link">
                         <img src="img/sponsors/sticker_mule.png" class="img-responsive" alt="">
+                            </a>
+                </div>
+            </div>
+            
+             <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4 sponsors-item">
+                    <a href="https://www.zesttea.com/" class="sponsors-link">
+                        <img src="img/sponsors/ZES_Logo-01.png" class="img-responsive" alt="">
                             </a>
                 </div>
             </div>
@@ -546,10 +735,10 @@ testing purposes-->
             </div>-->
 
 
-            <div class="row center-text">
+            <div class="row" style="text-align:center">
                 <h1>Partnerships</h1>
             </div>
-            <div class="row center-text">
+            <div class="row" style="text-align:center">
                 <br>
                 <br>
                 <div class="col-sm-12 sponsors-item">
@@ -574,18 +763,23 @@ testing purposes-->
                 <br />
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>Who can attend?</h3>
-                    <p>Any high school, undergraduate and graduate students are welcome to attend. There will be a few teams comprised of employees from local engineering and technology firms, however, these teams will be seperated from hackers and will not be elegible for the same prizes as hackers.</p>
-                    <hr class="dashed">
+                    <p>Any high school, undergraduate, and graduate students are welcome to attend. </p>
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Do I need programming or hardware experience to compete?</h3>
+                    <p>Of course not! We encourage all to participate. We will also have workshops and mentors to help everyone who attends.</p>
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>How will applicants be reviewed?</h3>
                     <p>Applications will be reviewed by the ProfHacks committee and selected participants will and be notified via email. Rowan students are guaranteed acceptance to this event, but will still need to apply.</p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>How much is this going to cost me?</h3>
                     <p>ProfHacks is completely free! Food, drinks, and awesome swag are completely free of charge!</p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>How do I get there?</h3>
@@ -595,41 +789,41 @@ testing purposes-->
                     You can take NJTransit bus.</a></p>
                     <p>Outside Philly</p>
                     <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.8269572,-75.2712937,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e0" class="gray-link"> Consider using US Megabus.</a></p>
-                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3" class="gray-link">
+                    <p><a href="https://www.google.com/maps/dir/Philadelphia,+PA/Glassboro,+NJ/@39.830215,-75.2794204,11z/am=t/data=!4m14!4m13!1m5!1m1!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!2m2!1d-75.1652215!2d39.9525839!1m5!1m1!1s0x89c6d7abad845dc5:0x5b768944f5f70002!2m2!1d-75.1118422!2d39.7028923!3e3" class="gray-link"> 
                     You may also want to use Amtrak.</a></p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>Where should I park?</h3>
                     <p>You can park in Parking Lot D, right next to the engineering building.</p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>What about team sizes?</h3>
                     <p>The maximum number of people a team can have is four. Though encouraged, having a team beforehand is not necessary. If you want to form a team at ProfHacks, there will be a fun mixer beforehand to help you meet potential team members.</p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>What should I bring?</h3>
                     <p>You should bring some form of identification (driver’s license, school ID card, etc.), laptops, phones, chargers and sleeping gear. You will also need to sign a liability waiver and photo release form to gain admittance.</p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>What shouldn’t I bring?</h3>
                     <p>Tools such as power drills, Dremel drills, soldering irons, and the like are prohibited. Articles such as weapons and alcohol are also prohibited. Any competitor found to be in possession of these articles will be disqualified from the competition.</p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>Do we have travel reimbursement?</h3>
                     <p>
                         Unfortunately, we will not be offering travel reimbursment.
                     </p>
-                    <hr class="dashed">
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>What hardware will you have?</h3>
                     <p>
-                        We are super excited to have MLH provide hardware for hackers to use during the event! A list will be updated a couple of weeks before the event.
+                        We are super excited to have MLH provide hardware for our hackers to use during the event. Below is the finalized list of hardware for this years event.
                     </p>
                    <div class="row">
                         <ul class="col-lg-6 list-group">
@@ -684,15 +878,15 @@ testing purposes-->
                             </li>
                         </ul>
                     </div> 
-                    <div class="row">
+                    <!-- <div class="row">
                         <ul class="col-lg-8 col-lg-offset-2 list-group">
                             <li class="list-group-item">
                                 Photon (Provided by both MLH and ProfHacks)
                             </li>
                         </ul>
-                    </div>
-                    <hr class="dashed">
-                </div>
+                    </div> -->
+                    <hr style="border-top: 1px dashed #8c8b8b; color: white;">
+                </div> 
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>I have a question that's not answered here; what should I do?</h3>
                     <p>We’re here for you! Send us an email at <a href="mailto:team@profhacks.com" class="gray-link">team@profhacks.com</a> or feel free to reach out to us on
@@ -751,46 +945,6 @@ testing purposes-->
             </div>
         </div>
     </section>
-    
-    <section id="bios">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>The Faces Behind the Hackathon</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="https://rowanieee.org/photos/officers2017/jason_square.JPG" class="img-responsive" alt=""></img>
-                </div>
-                <div class="col-sm-4">
-                    <img src="https://rowanieee.org/photos/officers2017/dj_square.JPG" class="img-responsive" alt=""></img>
-                </div>
-                <div class="col-sm-4">
-                    <img src="https://rowanieee.org/photos/officers2017/nikola_square.JPG" class="img-responsive" alt=""></img>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <p>
-                    Jason is a sophomore Mechanical Engineering major with a minor in mathematics. Since freshman year, Jason has been very active in the Rowan IEEE student branch. As a freshman, he led the ProfHacks sponsorship committee and competed in sumobot competitions. More recently, Jason holds the IEEE Philadelphia Section Student Representative position, where he ensures the continuing success of all IEEE Philly student branches. Jason is the lead organizer of ProfHacks which enables students to apply knowledge learned in class. He is very fortunate to be a leader in IEEE. He is in the process of starting his own clinic project at Rowan. Jason hopes NASA, SpaceX and Apple will read this bio and hire him on the spot!
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p>
-                    DJ Stahlberger is a freshmen Electrical and Computer Engineering Major. He is currently the Activities Co-Chair along with Nikola Kosaric. He helped with ProfHacks 2017 as a member of the Hacker Experience Committee. Outside of IEEE DJ loves to snowboard, play tennis, play video games, and work at his part-time job at an ice cream stand. He plans to pursue an internship at Atlantic City Electric and looks forward to a possible career with them. He was very adamant about joining IEEE and looks forward to his future with IEEE.
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p>
-                    Nikola Kosaric is a freshman Electrical and Computer Engineering major. With prior high school robotics experience, Nikola plans to start a VEX U robotics team at Rowan with fellow students. He has participated in the sumo robotics competition and is involved with sponsorship for ProfHacks 2017. Nikola hopes to secure an internship at Tesla Motors in the future and plans to pursue a career within the automotive industry.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -823,7 +977,7 @@ testing purposes-->
                         <a href="https://mlh.io/">
                             <image width="10%" src="img/mlh_logo.svg" />
                         </a><br><br>
-                        <a class="mlh-coc" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>
+                        <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" style="color:white;">MLH Code of Conduct</a>
                     </div>
                 </div>
             </div>

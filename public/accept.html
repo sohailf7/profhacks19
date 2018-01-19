@@ -156,97 +156,30 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <div id="prof-form">
-          <h1 id="title">Profhacks Registration</h1>
+          <h1 id="title">RSVP</h1>
           <br />
           <br />
-          <form ng-controller="formCtrl" name="regForm" class="regForm">
+          <form ng-controller="acceptCtrl" name="rsvpForm" class="rsvpForm">
             <div class="form-group">
-              <label for="first-name">First Name (Required):</label>
-              <input type="text" ng-model="data.first_name" name="first_name" class="form-control" value="{{data.first_name}}">
+              <label>Travel reimbursements will be taken care of via e-mail based on a first-come, first-serve tier system.</label>
             </div>
             <div class="form-group">
-              <label for="last-name">Last Name (Required):</label>
-              <input type="text" ng-model="data.last_name" name="last_name" class="form-control" value="{{data.last_name}}">
+              <label>
+                Everyone must fill out this waiver to be handed in at ProfHacks. (Students 18 and under require a parent's signature).<br />
+                <a href="/forms/mlhwaiver.pdf" target="_blank">Click here for the waiver</a><br />
+                <a href="/forms/photorelease.pdf" target="_blank">Click here for the photo release form</a><br />
+                This page will be available even after RSVPing.
+              </label>
             </div>
             <div class="form-group">
-              <label for="email">Email (Required):</label>
-              <input type="text" ng-model="data.email" name="email" class="form-control" value="{{data.email}}">
+              <label for="how">How did you find out about ProfHacks? <i>(Optional)</i></label>
+              <input type="text" ng-model="data.how" name="how" class="form-control">
             </div>
             <div class="form-group">
-              <label for="date_of_birth">Date of Birth (Required):</label>
-              <input type="text" ng-model="data.date_of_birth" name="date_of_birth" class="form-control" value="{{data.date_of_birth}}">
+              <label for="accept">Are you able to come to ProfHacks? (You are able to change your mind)</label><br>
+              <input type="radio" ng-model="data.accept" name="sms_notifications" data-ng-value="true">&nbsp; Yes, I will be attending ProfHacks &nbsp; <br />
+              <input type="radio" ng-model="data.accept" name="sms_notifications" data-ng-value="false">&nbsp; No, I am unable to attend
             </div>
-            <div class="form-group">
-              <label for="school">School (Required):</label>
-              <input type="text" ng-model="data.school" name="school" class="form-control" value="{{data.school.name}}">
-            </div>
-            <div class="form-group">
-              <label for="major">Major (Required):</label>
-              <input type="text" ng-model="data.major" name="major" class="form-control" value="{{data.major}}">
-            </div>
-            <div class="form-group">
-              <label for="graduation-date">Graduation Date (Required):</label>
-              <input type="text" ng-model="data.graduation" name="graduation" class="form-control" value="{{data.graduation}}">
-            </div>
-            <div class="form-group">
-              <label for="shirt-size">Shirt Size (Required):</label>
-              <select name="shirt_size" ng-model="data.shirt_size" class="form-control">
-                <option disabled selected value> -- Select an option -- </option>
-                <option value="x-small">Extra Small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="x-large">Extra Large</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="first-hackathon">Is this your first hackathon? (Required)</label>
-                <input type="radio" ng-model="data.first_hack" name="first_hackathon" value=true>&nbsp; Yes &nbsp; &nbsp;
-                <input type="radio" ng-model="data.first_hack" name="first_hackathon" value=false>&nbsp; No
-            </div>
-            <div class="form-group">
-              <label for="gender">Gender (Optional):</label>
-              <select ng-model="data.gender" name="gender" class="form-control">thanks.html
-                <option disabled selected value> -- Select an option -- </option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="dietary_restrictions">Dietary Restrictions (Optional) (Fill in your restriction if it isn't listed):</label>
-              <input type="text" list="dietary_restrictions" ng-model="data.diet" class="form-control"/>
-              <datalist id="dietary_restrictions">
-                <option value="None">None</option>
-                <option value="Vegetarian">Vegetarian</option>
-                <option value="Vegan">Vegan</option>
-                <option value="Gluten-Free">Gluten-Free</option>
-              </datalist>
-            </div>
-            <div class="form-group">
-              <label for="special-needs">Special Needs (Optional):</label>
-              <input type="text" name="special_needs" ng-model="data.special_needs" class="form-control" value="{{special_needs}}">
-            </div>
-            <div class="form-group">
-              <label for="phone-number">Phone Number (Optional):</label>
-              <input type="number" ng-model="data.phone" name="phone_number" class="form-control" value="{{phone_number}}">
-            </div>
-            <div class="form-group">
-              <label for="sms_notifications">Would you like to recieve SMS notifications about Profhacks? (Optional) [Requires Phone Number]</label><br>
-              <input type="radio" ng-model="data.sms_notify" name="sms_notifications" data-ng-value="true">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" ng-model="data.sms_notify" name="sms_notifications" data-ng-value="false">&nbsp; No
-            </div>
-            <div class="form-group">
-              <label for="travel">Do you need travel reimbursement? If so, explain your travel expenses/mileage (Optional):</label>
-              <textarea rows="10" cols="71" ng-model="data.travel" name="travel" class="form-control"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="resume">Would you like to upload you resume? (Optional)</label>
-              <input type="file" ng-model="data.resume" id="file">
-            </div>
-            <label for="submit">By submitting, you are agreeing to the terms of the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a>, <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>,
-              and the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>.
-              <br>Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.</label><br>
             <button type="button" id='submit' class="btn btn-success btn-lg" ng-click="submit(data)"> Submit </button>
           </form>
           </div>
@@ -262,8 +195,8 @@
                   <div class="footer-col col-md-4">
                       <h3>Location</h3>
                       <p>
-                        Engineering Hall <br>
-                        401 North Campus Drive <br>
+                        SOME ENGINEERING BUILDING <br>
+                        600 North Campus Drive <br>
                         Glassboro, NJ 08028
                       </p>
                   </div>
