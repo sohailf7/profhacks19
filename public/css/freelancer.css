@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap -  v0.0.0 ()
- * Copyright 2013-2018 
+ * Copyright 2013-2017 
  * Licensed under  ()
  */
 body {
@@ -315,7 +315,7 @@ footer .footer-col {
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #733577;
+  background-color: #d2b200;
 }
 .btn-outline {
   color: white;
@@ -361,8 +361,8 @@ footer .footer-below {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #622d66;
-  border-color: #5b2a5f;
+  background-color: #b89d00;
+  border-color: #ae9400;
 }
 .btn-primary:active,
 .btn-primary.active,
