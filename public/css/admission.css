@@ -1,0 +1,51 @@
+body {
+  background-color: #d8d8d8;
+  overflow-x: scroll;
+}
+
+header {
+  background: url('../img/pattern.png') no-repeat center center fixed;
+}
+
+.logo {
+  padding: 200px;
+  background: url('../img/logo-color-poly.svg') no-repeat center center;
+}
+
+#about.success {
+  background-color: #898989;
+}
+
+hr.star-light::after {
+  background-color: #898989;
+}
+
+#prof-form {
+  float: center;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 2%;
+  background-color: #e5e5e5;
+  border-radius: 1%;
+}
+
+#owl {
+  margin: 10%;
+  margin-right: 8%;
+  margin-left: 8%;
+  margin-top: 0;
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+}
+
+#submit-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  float: right;
+}
