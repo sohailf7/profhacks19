@@ -64,6 +64,7 @@ hr.star-primary:after {
 }
 
 .gray-link{
+    color: #FFFFFF;
     text-decoration: underline;
     text-decoration-color: #FFFFFF;
     text-decoration-style: dotted;
