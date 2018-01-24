@@ -78,14 +78,14 @@ hr.star-primary:after {
   right:15px;
   top:100px;
   width:10%;
-  z-index:10000;"
+  z-index:10000;
 }
 
 #trust-badge-img {
   width : 100%;
 }
 .map{
-  style="width:100%;
+  width:100%;
   min-height:400px;
 }
 
@@ -142,3 +142,4 @@ a.white-link{
         background-size: auto 100%;
     }
 }
+
