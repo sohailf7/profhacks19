@@ -102,7 +102,7 @@ hr.star-primary:after {
     text-decoration-style: dotted;
 }
 
-a:hover, #email-link:hover {
+a:active, a:focus, a:hover, #email-link:hover {
     color: #D3D3D3;
     text-decoration-color: #D3D3D3;
     text-decoration-style: solid;
@@ -142,4 +142,3 @@ a.white-link{
         background-size: auto 100%;
     }
 }
-
