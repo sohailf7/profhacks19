@@ -40,6 +40,6 @@
     "supervisor": "^0.11.0"
   },
   "engines": {
-    "node": "4.4.0"
+    "node": "4.7.0"
   }
 }
