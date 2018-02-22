@@ -20,6 +20,9 @@ header {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .logo {
