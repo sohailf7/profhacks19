@@ -1,0 +1,86 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.bgimg {
+    margin: 0%;
+    background-color: #662D8F;
+    border-color: #662D8F;
+    /* Background image */
+    background-image: url('../img/Nodes_Artboard 2.png');
+    /* Full-screen */
+    height: 100%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: white;
+    /* Add a font */
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+}
+
+/* Position text in the middle */
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+    margin: auto;
+    width: 40%;
+}
+
+section {
+  min-width: 400px;
+  padding: 0px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#countdown_div{
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
+    color: white;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#countdown_div > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #8662D8;
+    display: inline-block;
+}
+
+#countdown_div div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #662D8F;
+    display: inline-block;
+}
+
+#countdown_div div > div.label{
+    padding-top: 5px;
+    font-size: 16px;
+}
