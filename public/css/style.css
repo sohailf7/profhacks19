@@ -38,7 +38,7 @@ header {
         width:100vw;
     }
     header {
-        background: url('../img/background_2.png') no-repeat center center cover;
+        background: url('../img/background_2.png') no-repeat center center contain;
     }
     .logo{
         width:100%;
