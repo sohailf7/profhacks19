@@ -163,13 +163,13 @@ a.white-link{
 }
 
 #countdown_div div > span{
-	padding: 15px;
-	border-radius: 3px;
-	background: #843D89;
-	display: inline-block;
+    padding: 15px;
+    border-radius: 3px;
+    background: #843D89;
+    display: inline-block;
 }
 
 #countdown_div div > div.label{
-	padding-top: 5px;
-	font-size: 16px;
+    padding-top: 5px;
+    font-size: 16px;
 }
