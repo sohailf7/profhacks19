@@ -11,21 +11,36 @@ header {
     background: url('../img/background_2.png') no-repeat center center fixed;
     background-size: cover;
     background-color: #898989;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 .logo {
     width: 100%;
     padding: 250px;
-    background-size: contain;
     background: url('../img/PROF.svg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
     background-size: 800px 1200px;
     margin-bottom: 60px;
 }
 
+@media screen and (max-width:767px){
+    .html{
+        width:100vw;
+    }
+    .logo{
+        width:100%;
+        background-size: 90%;
+        padding-right: 0x;
+        padding-left : 0px;
+        padding-bottom: 0px;
+    }
+}
 #nav-logo{
     width:200px;
     height: 50px;
@@ -125,26 +140,6 @@ a.white-link{
   color: white;
 }
 
-@media screen and (max-width:767px){
-    .html{
-        width:100vw;
-    }
-    .logo{
-        width:100%;
-        background-size: contain;
-    }
-}
-
-@media screen and (max-width:500px){
-    .logo{
-        width:0%;
-        background-size:contain;
-    }
-    header{
-        background: url('../img/background-mobile.png') no-repeat center center fixed;
-        background-size: auto 100%;
-    }
-}
 
 #countdown_div{
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -152,7 +147,7 @@ a.white-link{
     display: inline-block;
     font-weight: 100;
     text-align: center;
-    font-size: 30px;
+    font-size: 4vw;
 }
 
 #countdown_div > div{
