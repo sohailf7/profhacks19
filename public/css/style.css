@@ -1,6 +1,11 @@
 html{
+    width: 100%;
+    overflow-x: hidden;
 }
 
+body{
+    width : 100%;
+}
 .btn-lg {
     background-color: #898989;
     border-color: #898989;
@@ -39,6 +44,15 @@ header {
         padding-right: 0x;
         padding-left : 0px;
         padding-bottom: 0px;
+    }
+    .container
+    {
+        overflow: hidden;
+        width: 100%;
+    }
+    .body{
+    overflow: hidden;
+    width: 100%;
     }
 }
 #nav-logo{
