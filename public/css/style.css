@@ -38,7 +38,7 @@ header {
         width:100vw;
     }
     header {
-        background: url('../img/background_2.png') no-repeat center center contain;
+        background: url('../img/background_2.png') no-repeat center center fixed;
     }
     .logo{
         width:100%;
@@ -46,7 +46,7 @@ header {
         padding-right: 0x;
         padding-left : 0px;
         padding-bottom: 0px;
-        background: url('../img/background_2.png') no-repeat center center fixed;
+        background: url('../img/PROF.svg') no-repeat center center contain;
     }
 }
 #nav-logo{
