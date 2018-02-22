@@ -174,5 +174,13 @@ a.white-link{
 
 #countdown_div div > div.label{
     padding-top: 5px;
-    font-size: 16px;
+    font-size: 2vw;
+}
+@media screen and (min-width: 788px) {
+    #countdown_div div > div.label{
+        font-size: 20px;
+    }
+    #countdown_div{
+        font-size: 32px;
+    }
 }
