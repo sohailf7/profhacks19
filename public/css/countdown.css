@@ -97,37 +97,42 @@ section {
 }
 
 #countdown_div{
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: white;
+    display: none;
     font-weight: 100;
     text-align: center;
-    font-size: 30px;
+    font-size: 4vw;
 }
 
 #countdown_div > div{
     padding: 10px;
     border-radius: 3px;
+    display: inline-block;
     animation: colorchange_alt 15s; /* animation-name followed by duration in seconds*/
          /* you could also use milliseconds (ms) or something like 2.15s */
     -webkit-animation: colorchange_alt 15s; /* Chrome and Safari */
     animation-iteration-count:infinite;
-    display: inline-block;
 }
 
 #countdown_div div > span{
     padding: 15px;
     border-radius: 3px;
+    display: inline-block;
     animation: colorchange 15s; /* animation-name followed by duration in seconds*/
          /* you could also use milliseconds (ms) or something like 2.15s */
     -webkit-animation: colorchange 15s; /* Chrome and Safari */
     animation-iteration-count:infinite;
-    display: inline-block;
 }
 
 #countdown_div div > div.label{
     padding-top: 5px;
     font-size: 16px;
-    animation: colorchange 15s; /* animation-name followed by duration in seconds*/
-    -webkit-animation: colorchange 15s; /* Chrome and Safari */
-    animation-iteration-count:infinite;
+}
+
+@media screen and (min-width: 788px) {
+    #countdown_div div > div.label{
+        font-size: 20px;
+    }
+    #countdown_div{
+        font-size: 32px;
+    }
 }
