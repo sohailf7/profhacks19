@@ -1,4 +1,39 @@
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body {
+}
+
+@keyframes colorchange
+{
+  0%   {background-color: #662D8F;}
+  33%  {background-color: #AC2957;}
+  67%  {background-color: #C56037}
+  100%   {background-color: #662D8F;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background-color: #662D8F;}
+  33%  {background-color: #AC2957;}
+  67%  {background-color: #C56037}
+  100%   {background-color: #662D8F;}
+}
+
+@keyframes colorchange_alt
+{
+  0%  {background-color: #C56037;}
+  33%   {background-color: #662D8F;}
+  67%  {background-color: #AC2957}
+  100%  {background-color: #C56037;}
+}
+
+@-webkit-keyframes colorchange_alt /* Safari and Chrome - necessary duplicate */
+{
+  0%  {background-color: #C56037;}
+  33%   {background-color: #662D8F;}
+  67%  {background-color: #AC2957}
+  100%  {background-color: #C56037;}
+}
+
 body, html {
     margin: 0;
 }
@@ -9,6 +44,10 @@ h1 {
 }
 .bgimg {
     margin: 0%;
+      animation: colorchange 15s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.15s */
+      -webkit-animation: colorchange 15s; /* Chrome and Safari */
+    animation-iteration-count:infinite;
     background-color: #662D8F;
     border-color: #662D8F;
     /* Background image */
@@ -58,9 +97,8 @@ section {
 }
 
 #countdown_div{
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
-    display: inline-block;
     font-weight: 100;
     text-align: center;
     font-size: 30px;
@@ -69,18 +107,27 @@ section {
 #countdown_div > div{
     padding: 10px;
     border-radius: 3px;
-    background: #8662D8;
+    animation: colorchange_alt 15s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.15s */
+    -webkit-animation: colorchange_alt 15s; /* Chrome and Safari */
+    animation-iteration-count:infinite;
     display: inline-block;
 }
 
 #countdown_div div > span{
     padding: 15px;
     border-radius: 3px;
-    background: #662D8F;
+    animation: colorchange 15s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.15s */
+    -webkit-animation: colorchange 15s; /* Chrome and Safari */
+    animation-iteration-count:infinite;
     display: inline-block;
 }
 
 #countdown_div div > div.label{
     padding-top: 5px;
     font-size: 16px;
+    animation: colorchange 15s; /* animation-name followed by duration in seconds*/
+    -webkit-animation: colorchange 15s; /* Chrome and Safari */
+    animation-iteration-count:infinite;
 }
