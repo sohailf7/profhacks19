@@ -17,7 +17,9 @@
   },
   "homepage": "http://www.profhacks.com",
   "dependencies": {
+    "express": "^4.16.4",
     "fabricjs": "^1.0.0",
+    "nodemon": "^1.18.5",
     "pug": "^2.0.3",
     "require-all": "^3.0.0"
   },
