@@ -39,7 +39,6 @@ Set the password to "hoot".
 
 # Testing
 1. Go to the ProfHacks repository folder.
-2. `gulp default`
-3. `npm test`
-4. Go to localhost:3000 on your browser.
-5. You should see no errors appear from the page or your terminal.
+2. `npm test`
+3. Go to localhost:3000 on your browser.
+4. You should see no errors appear from the page or your terminal.
