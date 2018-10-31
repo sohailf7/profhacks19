@@ -4,7 +4,8 @@
   "description": "Website for Profhacks 2019",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/.bin/nodemon app"
+    "test": "./node_modules/.bin/nodemon app",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
