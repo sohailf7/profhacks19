@@ -1,0 +1,52 @@
+- links = []
+- links.push({a: "#header-wrap"         , label: "Home"             })
+- links.push({a: "#themes_and_tracks"   , label: "Theme & Tracks"   })
+- links.push({a: "#about"               , label: "About"            })
+- links.push({a: "#sponsors"            , label: "Sponsors"         })
+- links.push({a: "#faq"                 , label: "FAQ"              })
+- links.push({a: "#contact"             , label: "Contact"          })
+// Header Area wrapper Starts
+header#header-wrap
+  .menu-wrap
+    .menu.navbar
+      .menu-list.navbar-collapse
+        ul.onepage-nev.navbar-nav
+          each link in links
+            li.nav-item
+              a.nav-link(href=link.a)= link.label
+    button.close-button#close-button
+      i.far.fa-times-circle
+
+nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.menu-bg
+  .container
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#main-navbar', aria-controls='main-navbar', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+            i.fas.fa-bars
+      a.navbar-brand(href="#")
+        img(src='assets/img/logo.png', alt='')
+    .collapse.navbar-collapse#main-navbar
+      ul.navbar-nav.mr-auto.w-100.justify-content-end.clearfix
+        li.nav-item#open-button
+          a.nav-link
+            i.fas.fa-bars
+  // Mobile Menu Start
+  - links = []
+  - links.push({a: "#header-wrap", name: "Home"})
+  - links.push({a: "#themes_and_tracks", name: "Themes & Tracks"})
+  - links.push({a: "#about", name: "About"})
+  - links.push({a: "#sponsors", name: "Sponsors"})
+  - links.push({a: "#faq", name: "FAQ"})
+  - links.push({a: "#contact", name: "Contact"})
+
+  ul.mobile-menu
+    li
+      a(href='#header-wrap') Home
+    li
+      a(href='#services') Services
+    li
+      a(href='#team') Team
+    li
+      a(href='#contact') Contact
+  // Mobile Menu End

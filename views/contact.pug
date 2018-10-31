@@ -1,0 +1,46 @@
+section#contact.section-padding
+  .container
+    .row.justify-content-center
+      .col-md-8.col-lg-8.col-xs-12.text-center
+        h6.subtitle Connect With Us
+        h2.section-title Get in Touch
+        .section-info Lorem ipsum dolor sit amet, ut consul mediocrem abhorreant cum. Id eum dolores. Delicatissimi ne pri modo accusamus. Augue vitae primis antiopam nec ex rationibus.
+    form
+      .row
+        // Contact form
+        .col-md-8
+          .row
+            .col-md-6
+              label Your Name
+              input.form-control#name(type='text', name='email', required='', data-error='Please enter your name')
+              .help-block.with-errors
+            .col-md-6
+              label Your E-mail
+              input.form-control#email(type='email', name='email', required='', data-error='Please enter your Email')
+              .help-block.with-errors
+          .row
+            .col-md-12
+              label Your Message
+              textarea.form-control#message(rows='4', name='message', required='', data-error='Write your message')
+          // Submit Button
+          .row
+            .col-md-12
+              button.btn.btn-common#form-submit(type='submit')
+                i.fa.fa-paper-plane(aria-hidden='true')
+                | Send Message
+              #msgSubmit.h3.text-center.hidden
+        // Contact info
+        .col-md-4.contact-right
+          .contact-box
+            h4 Address
+            p
+              | 1900 Pico Blvd, New York
+              br
+              | Centernial, colorado
+          .contact-box
+            h4 Call Us
+            p +48 123 456 789
+          .contact-box
+            h4 Say Hello
+            p
+              a(href='#') info@example.com
