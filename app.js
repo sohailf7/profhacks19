@@ -19,4 +19,5 @@ app.use("/assets/js", express.static(path.join(__dirname, "assets/js")));
 app.get("/", routes.home);
 //app.get("*", routes.page_not_found);
 
-app.listen(3000);
+const PORT = process.env.PORT;
+app.listen(PORT);
