@@ -20,6 +20,9 @@
 
 /* tablets */
 @media (max-width: 991px) {
+  .intro{
+    padding: 150px 0;
+  }
   .section-title {
     position: relative;
     margin-bottom: 10px;
@@ -60,6 +63,9 @@
   }
   .intro .heading-count h2 {
     font-size: 26px;
+  }
+  .intro .heading-count h3 {
+    font-size: 16px;
   }
   .time-countdown .time-entry {
     width: 100px;
