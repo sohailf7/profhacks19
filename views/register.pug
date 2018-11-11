@@ -1,0 +1,17 @@
+include header
+body
+  section.register
+    form#register
+      .row
+        .col-md-6
+          label First Name
+          input.form-control#fname(type='text', name='text', required, data-error='Please enter your first name')
+        .col-md-6
+          label Last Name
+          input.form-control#lname(type='text', name='text', required, data-error='Please enter your last name')
+        .col-md-6
+          label E-mail
+          input.form-control#email(type='email', name='email', required, data-error='Please enter your Email')
+          .help-block.with-errors
+      input.form-group
+include footer
