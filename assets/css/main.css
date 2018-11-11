@@ -300,8 +300,12 @@ a.back-to-top:hover, a.back-to-top:focus {
   }
 }
 
-.section-padding {
-  padding: 60px 0;
+.section-padding-top {
+  padding-top: 60px;
+}
+
+.section-padding-bottom {
+  padding-bottom: 60px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -894,6 +898,22 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 #themes_and_tracks .services-item h3 {
+  color: #343434;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+#about .services-item {
+  text-align: center;
+  padding: 30px 0;
+}
+
+#about .services-item h3 {
+  margin-bottom: 10px;
+}
+
+#about .services-item h3 {
   color: #343434;
   font-weight: 700;
   font-size: 20px;
