@@ -1,17 +1,67 @@
 include header
 body
-  section.register
-    form#register
-      .row
-        .col-md-6
-          label First Name
-          input.form-control#fname(type='text', name='text', required, data-error='Please enter your first name')
-        .col-md-6
-          label Last Name
-          input.form-control#lname(type='text', name='text', required, data-error='Please enter your last name')
-        .col-md-6
-          label E-mail
-          input.form-control#email(type='email', name='email', required, data-error='Please enter your Email')
-          .help-block.with-errors
-      input.form-group
+  section.register.section-padding-top.section-padding-bottom
+    .container
+      .row.justify-content-center
+        .col-md-10.col-lg-10.col-xs-12
+          if(message)
+            h3=message
+          form#register(action="/register" method="POST")
+            .row
+              .col-md-6
+                label First Name
+                input.form-control#fname(type='text', name='first_name', required)
+              .col-md-6
+                label Last Name
+                input.form-control#lname(type='text', name='last_name', required)
+              .col-md-6
+                label Email
+                input.form-control#email(type='email', name='email', required)
+                .help-block.with-errors
+              .col-md-6
+                label Phone
+                input.form-control#phone(type='telnet', name='phone', required)
+                .help-block.with-errors
+              .col-md-6
+                label School you currently attend
+                input.form-control#school(type='text', name='school', required)
+                .help-block.with-errors
+              .col-md-6
+                label What state do you live in?
+                input.form-control#state(type='text', name='state', required)
+                .help-block.with-errors
+              .col-md-6
+                label I am under 18 years old
+                input.form-control#minor(type='checkbox', name='minor')
+                .help-block.with-errors
+              .col-md-6
+                label This is my first Hackathon
+                input.form-control#first_timer(type='checkbox', name='first_timer')
+                .help-block.with-errors
+              .col-md-6
+                label Upload your resume (optional)
+                input.form-control#resume(type='file', name='resume')
+                .help-block.with-errors
+              .col-md-6
+                label I am an IEEE Student Member
+                input.form-control#ieee_student_member(type='checkbox', name='ieee_student_member')
+                .help-block.with-errors
+              .col-md-6
+                label If applicable, your IEEE Student Member Id #, YOU WILL RECEIVE A LIMITED EDITION PRIZE
+                input.form-control#ieee_member_id(type='text', name='ieee_member_id')
+                .help-block.with-errors
+              .col-md-6
+                label I have read and agree to the MLH 
+                  a(href="#") Code of Conduct
+                input.form-control#mlh_coc(type='checkbox', name='mlh_coc', required)
+                .help-block.with-errors
+              .col-md-6
+                label I have read and agree to the MLH 
+                  a(href="") Data Sharing Notice
+                input.form-control#mlh_dsn(type='checkbox', name='mlh_dsn', required)
+                .help-block.with-errors
+            .row
+              .col-sm-12.text-center
+                input.btn#submit(type='submit')
+
 include footer
