@@ -26,6 +26,7 @@ app.get("/register", routes.register);
 app.get("*", routes.page_not_found);
 
 app.post("/register", routes.register);
+app.post("/mailbox", routes.mailbox);
 
 const PORT = process.env.PORT;
 app.listen(PORT);
