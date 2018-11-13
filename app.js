@@ -1,15 +1,17 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const crypto = require("crypto");
 const { Pool, Client } = require('pg')
 
 const app = express();
 
-const routes = require('require-all')(path.join(__dirname, '/routes'));
+global.routes = require('require-all')(path.join(__dirname, '/routes'));
 
 const pool = new Pool();
 
 global.pool = pool;
+global.crypto = crypto;
 
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "pug");

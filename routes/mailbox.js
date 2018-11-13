@@ -2,8 +2,24 @@ module.exports = async function(req, res) {
   if(req.method === "POST") {
     const post = req.body
     console.log(post);
-    res.end();
+    try {
+      const client = await global.pool.connect();
+      const api_key = process.env.MAILGUN_API_KEY;
+      asserMailValid(api_key, `${post.timestamp}${post.token}`,"sha256");
+    }
+    catch(err){
+      return res.render("internal_error");
+    }
+    res.status(200);
+    return res.end();
   }
-  res.status(400);
-  res.end();
+  else {
+    return res.render("internal_error");
+  }
+}
+
+function asserMailValid(api_key, msg, digestMod){
+  const hmac = crypto.createHmac(digestMod, msg);
+  console.log(hmac.toString('hex'));
+  console.log(api_key);
 }
