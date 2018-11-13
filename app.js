@@ -19,5 +19,7 @@ app.use("/assets/js", express.static(path.join(__dirname, "assets/js")));
 app.get("/", routes.home);
 app.get("*", routes.page_not_found);
 
+app.post("/mailbox", routes.mailbox);
+
 const PORT = process.env.PORT;
 app.listen(PORT);
