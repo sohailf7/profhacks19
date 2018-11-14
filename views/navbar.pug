@@ -32,21 +32,8 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.menu-bg
           a.nav-link
             i.fas.fa-bars
   // Mobile Menu Start
-  - links = []
-  - links.push({a: "#header-wrap", name: "Home"})
-  - links.push({a: "#themes_and_tracks", name: "Themes & Tracks"})
-  - links.push({a: "#about", name: "About"})
-  - links.push({a: "#sponsors", name: "Sponsors"})
-  - links.push({a: "#faq", name: "FAQ"})
-  - links.push({a: "#contact", name: "Contact"})
-
   ul.mobile-menu
-    li
-      a(href='#header-wrap') Home
-    li
-      a(href='#services') Services
-    li
-      a(href='#team') Team
-    li
-      a(href='#contact') Contact
+    each link in links
+      li
+        a(href=link.a)= link.label
   // Mobile Menu End
