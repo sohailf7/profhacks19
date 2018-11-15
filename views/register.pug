@@ -34,6 +34,18 @@ body
           .col-sm-12.col-md-6.form-group
             label(for="resume") Resume (optional)
             input.form-control#resume(type="file", name="resume")
+          .col-sm-12.col-md-6.form-group
+            label(for="shirt_size") T-Shirt Size
+            select.form-control#shirt_size(type="text", name="shirt_size", required)
+              option(value="") Select a Shirt Size
+              option XXS
+              option XS
+              option S
+              option M
+              option L
+              option XL
+              option 2XL
+              option 3XL
           .col-sm-12.col-md-6.form-group.form-inline
             label(for="minor") I am under 18 years old
             input.form-control#minor(type="checkbox", name="minor")

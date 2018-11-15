@@ -15,10 +15,10 @@ module.exports = async function(req, res) {
       school: post.school,
       country: post.country,
       state: post.state,
+      shirt_size: post.shirt_size,
       minor: post.minor ? true : false,
       first_timer: post.first_timer ? true: false,
       resume: files.resume ? files.resume.data : null,
-      ieee_student_member: post.ieee_student_member ? true : false,
       ieee_member_id: post.ieee_member_id ? post.ieee_member_id : null,
       mlh_coc: post.mlh_coc ? true : false,
       mlh_dsn: post.mlh_dsn ? true : false,
@@ -38,7 +38,7 @@ async function registerHacker(hacker) {
   const client = await global.pool.connect();
   console.log(`Registering Hacker ${hacker.first_name} ${hacker.last_name}`);
   const sql = {
-    text: `INSERT INTO hacker (first_name, last_name, phone, email, school, country, state, minor, first_timer, resume, ieee_student_member, ieee_member_id, mlh_coc, mlh_dsn)
+    text: `INSERT INTO hacker (first_name, last_name, phone, email, school, country, state, minor, first_timer, resume, shirt_size, ieee_member_id, mlh_coc, mlh_dsn)
     VALUES                     ($1,         $2,        $3,    $4,    $5,     $6,         $7,       $8,    $9,          $10,    $11,                 $12,            $13,     $14)`,
     values: [
       hacker.first_name,
@@ -51,7 +51,7 @@ async function registerHacker(hacker) {
       hacker.minor,
       hacker.first_timer,
       hacker.resume,
-      hacker.ieee_student_member,
+      hacker.shirt_size,
       hacker.ieee_member_id,
       hacker.mlh_coc,
       hacker.mlh_dsn,
