@@ -16,6 +16,7 @@ module.exports = async function(req, res) {
       country: post.country,
       state: post.state,
       shirt_size: post.shirt_size,
+      dietary_restrictions: post.dietary_restrictions,
       minor: post.minor ? true : false,
       first_timer: post.first_timer ? true: false,
       resume: files.resume ? files.resume.data : null,
@@ -38,8 +39,8 @@ async function registerHacker(hacker) {
   const client = await global.pool.connect();
   console.log(`Registering Hacker ${hacker.first_name} ${hacker.last_name}`);
   const sql = {
-    text: `INSERT INTO hacker (first_name, last_name, phone, email, school, country, state, minor, first_timer, resume, shirt_size, ieee_member_id, mlh_coc, mlh_dsn)
-    VALUES                     ($1,         $2,        $3,    $4,    $5,     $6,         $7,       $8,    $9,          $10,    $11,                 $12,            $13,     $14)`,
+    text: `INSERT INTO hacker (first_name, last_name, phone, email, school, country, state, minor, first_timer, resume, shirt_size, dietary_restrictions, ieee_member_id, mlh_coc, mlh_dsn)
+VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15)`,
     values: [
       hacker.first_name,
       hacker.last_name,
@@ -52,6 +53,7 @@ async function registerHacker(hacker) {
       hacker.first_timer,
       hacker.resume,
       hacker.shirt_size,
+      hacker.dietary_restrictions,
       hacker.ieee_member_id,
       hacker.mlh_coc,
       hacker.mlh_dsn,
