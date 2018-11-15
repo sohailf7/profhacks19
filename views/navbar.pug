@@ -1,5 +1,6 @@
 - links = []
 - links.push({a: "#header-wrap"         , label: "Home"             })
+- links.push({a: "/register"            , label: "Registration"     })
 - links.push({a: "#themes_and_tracks"   , label: "Theme & Tracks"   })
 - links.push({a: "#about"               , label: "About"            })
 - links.push({a: "#FAQ"                 , label: "FAQ"              })
@@ -12,7 +13,7 @@ header#header-wrap
         ul.onepage-nev.navbar-nav
           each link in links
             li.nav-item
-              a.nav-link(href=link.a)= link.label
+              a.nav-link(href=link.a target="_blank")= link.label
     button.close-button#close-button
       i.far.fa-times-circle
 
@@ -23,7 +24,7 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.menu-bg
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#main-navbar', aria-controls='main-navbar', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
             i.fas.fa-bars
-      a.navbar-brand(href="#")
+      a.navbar-brand(href="/#")
         img(src='/assets/img/logo.png', alt='ProfHacks2019')
     .collapse.navbar-collapse#main-navbar
       ul.navbar-nav.mr-auto.w-100.justify-content-end.clearfix

@@ -1,10 +1,11 @@
+- pageTitle = "Registration"
 include header
 body
   section.register.section-padding-top.section-padding-bottom
     .container
       if message
         h2=message
-      form#register(action="/register" method="post")
+      form#register(action="/register" method="post", enctype="multipart/form-data")
         .row
           .col-sm-12.col-md-6.form-group
             label(for="first_name") First Name
@@ -14,7 +15,7 @@ body
             input.form-control#last_name(type="text", name="last_name", required)
           .col-sm-12.col-md-6.form-group
             label(for="phone") Phone #
-            input.form-control.bfh-phone#phone(type="text", name="phone", data-validation="+1 (ddd) ddd-dddd" data-mask="+1 (999) 999-9999", required)
+            input.form-control#phone(type="text", name="phone", required)
           .col-sm-12.col-md-6.form-group
             label(for="email") Email
             input.form-control#email(type="email", name="email", required)
