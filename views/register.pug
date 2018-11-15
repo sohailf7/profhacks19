@@ -4,7 +4,7 @@ body
     .container
       if message
         h2=message
-      form#register(action="/register" method="post")
+      form#register(action="/register" method="post", enctype="multipart/form-data")
         .row
           .col-sm-12.col-md-6.form-group
             label(for="first_name") First Name

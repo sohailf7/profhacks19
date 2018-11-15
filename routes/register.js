@@ -17,7 +17,7 @@ module.exports = async function(req, res) {
       state: post.state,
       minor: post.minor ? true : false,
       first_timer: post.first_timer ? true: false,
-      resume: files,
+      resume: files.resume.data,
       ieee_student_member: post.ieee_student_member ? true : false,
       ieee_member_id: post.ieee_member_id ? post.ieee_member_id : null,
       mlh_coc: post.mlh_coc ? true : false,
