@@ -1,17 +1,56 @@
 include header
 body
-  section.register
-    form#register
-      .row
-        .col-md-6
-          label First Name
-          input.form-control#fname(type='text', name='text', required, data-error='Please enter your first name')
-        .col-md-6
-          label Last Name
-          input.form-control#lname(type='text', name='text', required, data-error='Please enter your last name')
-        .col-md-6
-          label E-mail
-          input.form-control#email(type='email', name='email', required, data-error='Please enter your Email')
-          .help-block.with-errors
-      input.form-group
+  section.register.section-padding-top.section-padding-bottom
+    .container
+      if message
+        h2=message
+      form#register(action="/register" method="post")
+        .row
+          .col-sm-12.col-md-6.form-group
+            label(for="first_name") First Name
+            input.form-control#first_name(type="text", name="first_name", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="last_name") Last Name
+            input.form-control#last_name(type="text", name="last_name", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="phone") Phone #
+            input.form-control.bfh-phone#phone(type="text", name="phone", data-validation="+1 (ddd) ddd-dddd" data-mask="+1 (999) 999-9999", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="email") Email
+            input.form-control#email(type="email", name="email", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="school") School
+            input.form-control#school(type="text", name="school", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="country") Country
+            select.form-control#country(type="text", name="country", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="state") State
+            select.form-control#state(type="text", name="state", required)
+          .col-sm-12.col-md-6.form-group
+            label(for="ieee_member_id") IEEE Student Member # (if applicable, you will receive a limited edition prize) 
+            input.form-control#ieee_member_id(type="number", name="ieee_member_id")
+          .col-sm-12.col-md-6.form-group
+            label(for="resume") Resume (optional)
+            input.form-control#resume(type="file", name="resume")
+          .col-sm-12.col-md-6.form-group.form-inline
+            label(for="minor") I am under 18 years old
+            input.form-control#minor(type="checkbox", name="minor")
+          .col-sm-12.col-md-6.form-group.form-inline
+            label(for="first_timer") This is my first Hackathon
+            input.form-control#first_timer(type="checkbox", name="first_timer")
+          .col-sm-12.col-md-6.form-group.form-inline
+            label(for="mlh_coc") I have read and agree to the 
+              a(href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank") &nbsp;MLH Code of Conduct
+            input.form-control#mlh_coc(type="checkbox", name="mlh_coc", required)
+          .col-sm-12.col-md-6.form-group.form-inline
+            label(for="mlh_dsn") I have read and agree to the 
+              a(href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md", target="_blank") &nbsp;MLH Data Sharing Notice
+            input.form-control#mlh_dsn(type="checkbox", name="mlh_dsn", required)
+        .row
+          .col-sm-12.text-center
+            input(type="submit").btn
+
 include footer
+script(src="/assets/js/countries.js")
+include ../assets/js/register.js

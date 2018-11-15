@@ -1206,6 +1206,15 @@ a.back-to-top:hover, a.back-to-top:focus {
   outline: 0;
 }
 
+select.form-control {
+  height: 52px !important;
+}
+
+input[type="checkbox"].form-control {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
 .pagination .page-item .page-link {
   margin: 3px;
   padding: 15px 20px;

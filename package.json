@@ -19,6 +19,7 @@
   "homepage": "http://www.profhacks.com",
   "dependencies": {
     "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
     "fabricjs": "^1.0.0",
     "mailgun-js": "^0.22.0",
     "nodemailer": "^4.6.8",
