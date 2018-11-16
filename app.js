@@ -1,5 +1,3 @@
-const http = require("http")
-const https = require("https")
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -30,6 +28,7 @@ app.use("/assets/js", express.static(path.join(__dirname, "assets/js")));
 
 app.use("/.well-known/acme-challenge", express.static(path.join(__dirname, "lets_encrypt")));
 
+app.get("*", routes.https_redirect);
 app.get("/", routes.home);
 app.get("/register", routes.register);
 app.get("*", routes.page_not_found);
@@ -40,8 +39,3 @@ app.post("/mailbox", routes.mailbox);
 const PORT = process.env.PORT;
 app.listen(PORT);
 
-//https.createServer({
-//  key: fs.readFileSync(path.join(__dirname, "encryption/private.key")),
-//  cert: fs.readFileSync(path.join(__dirname, "encryption/certificate.crt")),
-//  ca: fs.readFileSync(path.join(__dirname, "encryption/ca_bundle.crt")),
-//}, app).listen(443);
