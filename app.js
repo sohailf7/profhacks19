@@ -1,4 +1,7 @@
+const http = require("http")
+const https = require("https")
 const express = require("express");
+const fs = require("fs");
 const path = require("path");
 const bodyParser = require("body-parser");
 const fileUpload = require('express-fileupload')
@@ -36,3 +39,9 @@ app.post("/mailbox", routes.mailbox);
 
 const PORT = process.env.PORT;
 app.listen(PORT);
+
+https.createServer({
+  key: fs.readFileSync(path.join(__dirname, "encryption/private.key")),
+  cert: fs.readFileSync(path.join(__dirname, "encryption/certificate.crt")),
+  ca: fs.readFileSync(path.join(__dirname, "encryption/ca_bundle.crt")),
+}, app).listen(443);
