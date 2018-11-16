@@ -25,6 +25,8 @@ app.use("/assets/fonts", express.static(path.join(__dirname, "assets/fonts")));
 app.use("/assets/img", express.static(path.join(__dirname, "assets/img")));
 app.use("/assets/js", express.static(path.join(__dirname, "assets/js")));
 
+app.use("/.well-known/acme-challenge", express.static(path.join(__dirname, "lets_encrypt")));
+
 app.get("/", routes.home);
 app.get("/register", routes.register);
 app.get("*", routes.page_not_found);
