@@ -33,6 +33,7 @@ app.get("/", routes.home);
 app.get("/register", routes.register);
 app.get("*", routes.page_not_found);
 
+app.post("/", routes.home);
 app.post("/register", routes.register);
 app.post("/mailbox", routes.mailbox);
 
