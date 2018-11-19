@@ -5,14 +5,14 @@ section#contact.section-padding-top.section-padding-bottom
         h6.subtitle Connect With Us
         h2.section-title Get in Touch
         .section-info We would love to hear from you! Fill out the form below with feedback, questions, or concerns, and we will happily help!
-    form
+    form(action="/", method="post")
       .row
         // Contact form
         .col-md-8
           .row
             .col-md-6
               label Your Name
-              input.form-control#name(type='text', name='email', required='', data-error='Please enter your name')
+              input.form-control#name(type='text', name='name', required='', data-error='Please enter your name')
               .help-block.with-errors
             .col-md-6
               label Your E-mail
