@@ -11,6 +11,7 @@ module.exports = async function(req, res){
       const message = post.message;
 
       await uploadMessage(name, email, message);
+      return res.render("contact_message", {message: "Thanks For Contacting Us!"});
     }
     catch(err){
       console.log(err, err.stack);
