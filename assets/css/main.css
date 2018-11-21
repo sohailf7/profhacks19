@@ -157,6 +157,7 @@ ul li, ol li {
   cursor: pointer;
   font-weight: 400;
   color: var(--color-5);
+  background-color: var(--color-6);
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
