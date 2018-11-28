@@ -89,9 +89,11 @@ else
               label(for="mlh_dsn") I have read and agree to the 
                 a(href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md", target="_blank") &nbsp;MLH Data Sharing Notice
               input.form-control#mlh_dsn(type="checkbox", name="mlh_dsn", required)
+            .col-sm-12.col-md-6.form-group
+              label() Please note that teams are capped at four people (register each member individually).
           .row
             .col-sm-12.text-center
-              input(type="submit").btn
+              input(type="submit")#register-btn.btn
 
   include footer
   script(src="/assets/js/countries.js")

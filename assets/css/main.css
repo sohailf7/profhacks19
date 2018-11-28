@@ -5,7 +5,6 @@
   --color-4: #8A68C9;
   --color-5: #151545;
   --color-6: #FFFFFF;
-  --color-7: #333;
 }
 
 /* Google Fonts */
@@ -151,13 +150,18 @@ ul li, ol li {
   margin-bottom: 15px;
 }
 
+#register-btn.btn {
+  color: var(--color-7);
+  background-color: var(--color-2);
+
+}
 .btn {
   font-size: 14px;
   padding: 12px 20px;
   border-radius: 0px;
   cursor: pointer;
   font-weight: 400;
-  color: var(--color-7);
+  color: var(--color-5);
   background-color: var(--color-6);
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
