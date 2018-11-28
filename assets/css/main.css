@@ -4,7 +4,8 @@
   --color-3: #17647C;
   --color-4: #8A68C9;
   --color-5: #151545;
-
+  --color-6: #FFFFFF;
+  --color-7: #333;
 }
 
 /* Google Fonts */
@@ -156,8 +157,8 @@ ul li, ol li {
   border-radius: 0px;
   cursor: pointer;
   font-weight: 400;
-  color: var(--color-4);
-  text-transform: uppercase;
+  color: var(--color-7);
+  background-color: var(--color-6);
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -173,7 +174,7 @@ ul li, ol li {
 }
 
 .btn-common {
-  background-color: var(--color-5);
+  background-color: var(--color-6);
   position: relative;
   z-index: 1;
   border-radius: 4px;
@@ -204,6 +205,19 @@ ul li, ol li {
   padding: 14px 33px;
   text-transform: uppercase;
   font-size: 16px;
+}
+
+.btn-dark {
+  .btn-common;
+  background-color: var(--color-5);
+  color: var(--color-4);
+  border-radius: 4px;
+}
+
+.btn-dark:hover {
+  color: var(--color-4);
+  background-color: var(--color-5);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
 }
 
 button:focus {
