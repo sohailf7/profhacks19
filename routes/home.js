@@ -31,5 +31,7 @@ async function uploadMessage(name, email, message) {
   }
 
   console.log(sql);
-  return client.query(sql);
+  const results = await client.query(sql);
+  await client.release();
+  return results
 }
