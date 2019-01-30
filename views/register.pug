@@ -54,7 +54,7 @@ else
             .col-sm-12.col-md-6.form-group
               label(for="gender") Gender
               select.form-control#gender(type="text", name="gender", required)
-                option(value=-1)
+                option(value=null)
                 option Male
                 option Female
                 option Prefer Not to Answer
@@ -63,7 +63,7 @@ else
             .col-sm-12.col-md-6.form-group
               label(for="race") What is your Race/Ethnicity?
               select.form-control#race(type="text", name="race", required)
-                option(value=-1)
+                option(value=null)
                 option American Indian or Alaskan Native
                 option Asian / Pacific Islander
                 option Black or African American
@@ -96,7 +96,7 @@ else
             .col-sm-12.col-md-6.form-group
               label(for="shirt_size") T-Shirt Size
               select.form-control#shirt_size(type="text", name="shirt_size", required)
-                option(value="") Select a Shirt Size
+                option(value=null) Select a Shirt Size
                 option XXS
                 option XS
                 option S
