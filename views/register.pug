@@ -49,6 +49,39 @@ else
               label(for="school") School
               input.form-control#school(type="text", name="school", required)
             .col-sm-12.col-md-6.form-group
+              label(for="birthdate") Birthdate
+              input.form-control#birthdate(type="date", name="birthdate", required)
+            .col-sm-12.col-md-6.form-group
+              label(for="gender") Gender
+              select.form-control#gender(type="text", name="gender", required)
+                option(value=-1)
+                option Male
+                option Female
+                option Prefer Not to Answer
+                option Other (Please Specify)
+              input.form-control#gender_specify(type="text", name="gender" style="display:none")
+            .col-sm-12.col-md-6.form-group
+              label(for="race") What is your Race/Ethnicity?
+              select.form-control#race(type="text", name="race", required)
+                option(value=-1)
+                option American Indian or Alaskan Native
+                option Asian / Pacific Islander
+                option Black or African American
+                option Hispanic
+                option White / Caucasian
+                option Multiple ethnicity / Other (Please Specify)
+                option Prefer not to answer
+              input.form-control#race_specify(type="text", name="race" style="display:none")
+            .col-sm-12.col-md-6.form-group
+              label(for="major") What is your Major?
+              select.form-control#major(type="text", name="major")
+            .col-sm-12.col-md-6.form-group
+              label(for="los") What is your most current level of study?
+              select.form-control#los(type="text", name="los")
+            .col-sm-12.col-md-6.form-group
+              label(for="graduation") What is your graduation year?
+              select.form-control#graduation(type="number", name="graduation")
+            .col-sm-12.col-md-6.form-group
               label(for="country") Country
               select.form-control#country(type="text", name="country", required)
             .col-sm-12.col-md-6.form-group
@@ -86,9 +119,11 @@ else
                 a(href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank") &nbsp;MLH Code of Conduct
               input.form-control#mlh_coc(type="checkbox", name="mlh_coc", required)
             .col-sm-12.col-md-6.form-group.form-inline
-              label(for="mlh_dsn") I have read and agree to the 
-                a(href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md", target="_blank") &nbsp;MLH Data Sharing Notice
-              input.form-control#mlh_dsn(type="checkbox", name="mlh_dsn", required)
+              .col-sm-11(style="padding-left:0px; padding-right: 0px")
+                label(for="mlh_dsn") I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.
+                //a(href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md", target="_blank") &nbsp;MLH Data Sharing Notice
+              .col-sm-1
+                input.form-control#mlh_dsn(type="checkbox", name="mlh_dsn", required)
             .col-sm-12.col-md-6.form-group
               label() Please note that teams are capped at four people (register each member individually).
           .row
