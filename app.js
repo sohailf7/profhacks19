@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const fileUpload = require('express-fileupload')
 const crypto = require("crypto");
 const { Pool, Client } = require('pg')
+const appConfig = require('config').get('app')
 
 const app = express();
 
@@ -28,7 +29,8 @@ app.use("/assets/js", express.static(path.join(__dirname, "assets/js")));
 
 app.use("/.well-known/acme-challenge", express.static(path.join(__dirname, "lets_encrypt")));
 
-app.get("*", routes.https_redirect);
+if(appConfig.requireHttps)
+  app.get("*", routes.https_redirect);
 app.get("/", routes.home);
 app.get("/register", routes.register);
 app.get("*", routes.page_not_found);
@@ -37,6 +39,4 @@ app.post("/", routes.home);
 app.post("/register", routes.register);
 app.post("/mailbox", routes.mailbox);
 
-const PORT = process.env.PORT;
-app.listen(PORT);
-
+app.listen(appConfig.port);
