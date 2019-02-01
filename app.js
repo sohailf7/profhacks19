@@ -6,12 +6,13 @@ const fileUpload = require('express-fileupload')
 const crypto = require("crypto");
 const { Pool, Client } = require('pg')
 const appConfig = require('config').get('app')
+const dbConfig = require('config').get('database')
 
 const app = express();
 
 global.routes = require('require-all')(path.join(__dirname, '/routes'));
 
-const pool = new Pool({ ssl : { rejectUnauthorized : false} } );
+const pool = new Pool(dbConfig);
 
 global.pool = pool;
 global.crypto = crypto;
