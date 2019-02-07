@@ -17,22 +17,22 @@
   padding-bottom: 48px;
 }
 
-.sponsor-logo {
+.sp-logo {
   max-width: calc(100vw - 1em);
 }
-.sponsor-platinum .sponsor-logo {
+.sponsor-platinum .sp-logo {
   max-height: 25em;
   min-height: 20em;
   max-width: calc(100vw - 0.75em);
 }
 
-.sponsor-gold .sponsor-logo{
+.sponsor-gold .sp-logo{
   max-height: 15em;
   min-height: 8em;
   max-width: calc(100vw - 1.5em);
 }
 
-.sponsor-bronze .sponsor-logo{
+.sponsor-bronze .sp-logo{
   max-height: 8em;
   min-height: 5em;
   max-width: calc(100vw - 2em);
