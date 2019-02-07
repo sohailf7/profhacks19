@@ -1,0 +1,13 @@
+table#schedule-table {
+
+}
+
+table#schedule-table th {
+  text-align: center;
+}
+
+table#schedule-table td {
+  padding-top : 5px;
+  padding-bottom : 5px;
+
+}

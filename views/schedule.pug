@@ -1,75 +1,33 @@
 section#schedule.section-padding-top
   .container
     .row.justify-content-center
-      .col-lg-8.col-lg-offset-2
-        h3 Schedule
-          table.table
-            thead
-              tr
-                th Time
-                th Event
-            tbody
-              tr
-                th 10:00AM - 11:00AM
-                th Check-In
-              tr
-                th 11:00AM
-                th Opening Ceremony
-              tr
-                th 12:00 PM
-                th Lunch and begin hacking
-              tr
-                th 1:00PM - 2:00PM
-                th Team Building
-              tr
-                th 1:00PM
-                th MLH Hardware Lab Opens
-              tr
-                th 1:30PM - 2:30PM
-                th Intro to Hackathons Workshop
-              tr
-                th 2:30PM - 3:00PM
-                th What are Smart Cities of Tomorrow and IoT?
-              tr
-                th 4:00PM - 5:00PM
-                th Webtime with John
-              tr
-                th 6:00 PM
-                th Dinner
-              tr
-                th 7:00PM - 8:00PM
-                th Intro to Cryptocurrencies
-              tr
-                th 9:30PM - 10:30PM
-                th Marketing Yourself Workshop
-              tr
-                th 12:00 AM
-                th Midnight Snack
-              tr
-                th 3:00 AM
-                th Late Night Snack
-              tr
-                th 8:00 AM
-                th Breakfast
-              tr
-                th 12:00 PM
-                th Project Submissions Due
-              tr
-                th 12:00 PM
-                th Lunch
-              tr
-                th 12:45PM
-                th Hackers Set Up for Science Fair Judging
-              tr
-                th 1:00PM
-                th Science Fair Judging
-              tr
-                th 2:45PM
-                th Move to Pfleeger
-              tr
-                th 3:15PM
-                th Top 10 Hacks Present
-              tr
-                th 4:30PM
-                th Closing Ceremony
-
+      .col-md-8.col-lg-8.col-xs-12.text-center
+        h2.section-title Schedule
+        table.table#schedule-table
+          thead
+            tr
+              th Time
+              th Event
+          tbody
+            include event
+            +event('10:00 AM - 11:00 AM', 'Check-In'                                )
+            +event('11:00 AM'           , 'Opening Ceremony'                        )
+            +event('12:00 PM'           , 'Lunch and Begin Hacking'                 )
+            +event('1:00 PM - 2:00 PM'  , 'Team Building'                           )
+            +event('1:00 PM'            , 'MLH Hardware Lab Opens'                  )
+            +event('1:30 PM - 2:30 PM'  , 'Workshop: Intro to Hackathons Workshop'  )
+            +event('2:30 PM - 3:00 PM'  , 'TBD'                                     )
+            +event('4:00 PM - 5:00 PM'  , 'Workshop: Webtime with John'             )
+            +event('6:00 PM'            , 'Dinner'                                  )
+            +event('7:00 PM - 8:00 PM'  , 'Workshop: TBD'                           )
+            +event('9:30 PM - 10:30 PM' , 'Workshop: TBD'                           )
+            +event('12:00 AM'           , 'Midnight Snack'                          )
+            +event('3:00 AM'            , 'Late Night Snack'                        )
+            +event('8:00 AM'            , 'Breakfast'                               )
+            +event('12:00 PM'           , 'Project Submissions Due'                 )
+            +event('12:00 PM'           , 'Lunch'                                   )
+            +event('12:45 PM'           , 'Hackers Set Up for Science Fair Judging' )
+            +event('1:00 PM'            , 'Science Fair Judging'                    )
+            +event('2:45 PM'            , 'Move to Pfleeger'                        )
+            +event('3:45 PM'            , 'Top 10 Present'                          )
+            +event('4:30 PM'            , 'Closing Ceremony'                        )
