@@ -1,13 +1,12 @@
-table#schedule-table {
-
+table.schedule-table > thead th{
+  font-size: 18px;
 }
 
-table#schedule-table th {
+table.schedule-table th {
   text-align: center;
 }
 
-table#schedule-table td {
-  padding-top : 5px;
-  padding-bottom : 5px;
-
+table.schedule-table > tbody > tr > th {
+  width: 50%;
 }
+

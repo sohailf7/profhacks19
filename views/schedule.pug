@@ -3,12 +3,14 @@ section#schedule.section-padding-top
     .row.justify-content-center
       .col-md-8.col-lg-8.col-xs-12.text-center
         h2.section-title Schedule
-        table.table#schedule-table
+        table.table.table-sm.schedule-table
           thead
+            tr
+              th(colspan=2) Saturday March 9th
+          tbody
             tr
               th Time
               th Event
-          tbody
             include event
             +event('10:00 AM - 11:00 AM', 'Check-In'                                )
             +event('11:00 AM'           , 'Opening Ceremony'                        )
@@ -24,6 +26,15 @@ section#schedule.section-padding-top
             +event('8:30 PM - 9:15 PM'  , 'MLH Slideshow Karaoke'                   )
             +event('9:30 PM - 10:30 PM' , 'IEEE Workshop'                           )
             +event('10:30 PM - 11:30 PM', 'Planetarium Show - "To Space and Back"'  )
+        br
+        table.table.table-sm.schedule-table
+          thead
+            tr
+              th(colspan=2) Sunday, March 10th
+          tbody
+            tr
+              th Time
+              th Event
             +event('12:00 AM'           , 'Midnight Trivia and Cookies'             )
             +event('3:00 AM'            , 'Late Night Snack'                        )
             +event('8:00 AM'            , 'Breakfast'                               )
