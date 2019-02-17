@@ -46,22 +46,31 @@
   width: auto;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) {
-.sponsor-platinum .sp-logo {
-  max-height: 20em;
-  width: auto;
-}
-
-.sponsor-gold .sp-logo{
-  max-height: 8em;
-  width: auto;
-}
-
-.sponsor-bronze .sp-logo{
+.sponsor-partner .sp-logo{
   max-height: 6em;
   width: auto;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .sponsor-platinum .sp-logo {
+    max-height: 20em;
+    width: auto;
+  }
+
+  .sponsor-gold .sp-logo{
+    max-height: 8em;
+    width: auto;
+  }
+
+  .sponsor-bronze .sp-logo{
+    max-height: 6em;
+    width: auto;
+  }
+
+  .sponsor-partner .sp-logo{
+    max-height: 6em;
+    width: auto;
+  }
 
 }
