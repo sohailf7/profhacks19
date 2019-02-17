@@ -1,3 +1,8 @@
+.sponsorship-tier {
+  display: flex;
+  align-items: center;
+}
+
 .sponsorship-tier > h2 {
   font-size:24px;
   color: #333;
@@ -18,7 +23,6 @@
 }
 
 .sp-logo {
-  max-width: calc(100vw - 1em);
 }
 
 .sp-rowan-cares {
@@ -28,20 +32,36 @@
 }
 
 .sponsor-platinum .sp-logo {
-  max-height: 25em;
-  min-height: 20em;
-  max-width: calc(100vw - 0.75em);
+  max-height: 20em;
+  width: auto;
 }
 
 .sponsor-gold .sp-logo{
-  max-height: 15em;
-  min-height: 8em;
-  max-width: calc(100vw - 1.5em);
+  max-height: 7em;
+  width: auto;
 }
 
 .sponsor-bronze .sp-logo{
-  max-height: 8em;
-  min-height: 5em;
-  max-width: calc(100vw - 2em);
+  max-height: 6em;
+  width: auto;
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+.sponsor-platinum .sp-logo {
+  max-height: 20em;
+  width: auto;
+}
+
+.sponsor-gold .sp-logo{
+  max-height: 8em;
+  width: auto;
+}
+
+.sponsor-bronze .sp-logo{
+  max-height: 6em;
+  width: auto;
+}
+
+
+}
