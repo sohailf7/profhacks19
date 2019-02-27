@@ -25,10 +25,8 @@
 .sp-logo {
 }
 
-.sp-rowan-cares {
-  max-height: 25em;
-  min-height: 15em;
-  max-width: calc(100vw - 1.5em);
+.profhacks-cares {
+  max-height: 20em;
 }
 
 .sponsor-platinum .sp-logo {
