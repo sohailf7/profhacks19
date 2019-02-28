@@ -34,6 +34,7 @@ if(appConfig.requireHttps)
   app.get("*", routes.https_redirect);
 app.get("/", routes.home);
 app.get("/register", routes.register);
+app.get("/guide", routes.guide);
 app.get("*", routes.page_not_found);
 
 app.post("/", routes.home);
