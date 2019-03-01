@@ -623,12 +623,18 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 .intro .heading-count h2 {
   font-size: 80px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .intro .heading-count h3 {
   font-size: 40px;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.intro .heading-count h4 {
+  font-size: 24px;
   margin-bottom: 5px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
